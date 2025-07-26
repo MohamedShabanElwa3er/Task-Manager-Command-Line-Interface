@@ -17,7 +17,7 @@ A simple and efficient **Command-Line Task Manager** written in **C++**. This pr
 
 ## 📂 Project Compilation and Execution 
 
-- PLease use the following command to build and run the project
+- Please use the following command to build and run the project
 
 ## g++ -std=c++17 main.cpp task.cpp task_manager.cpp -o TaskManager
 
