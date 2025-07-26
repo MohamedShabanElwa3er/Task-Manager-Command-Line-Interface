@@ -15,18 +15,6 @@ A simple and efficient **Command-Line Task Manager** written in **C++**. This pr
 - Input validation and error handling
 - Fully documented using **Doxygen**
 
----
-## 📌 Project Structure
-
-TaskManagerApp/
-├── src/
-│   ├── main.cpp
-│   ├── task.cpp
-│   ├── task_manager.cpp
-│   ├── task.hpp
-│   └── task_manager.hpp
-├── README.md
----
 ## 📂 Project Compilation and Execution 
 
 - PLease Use The Following Command to build and execute the program
