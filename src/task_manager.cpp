@@ -43,10 +43,20 @@ void TaskManager::addTask(const std::string &title, const std::string &desc, con
  */
 void TaskManager::listTasks(void) const
 {
-    for (auto &ref : tasks)
+    int TaskCounter = 0;
+    if (tasks.size() > 0)
     {
-        std::cout << "---------------------------------------------------" << std::endl;
-        std::cout << ref.toString() << std::endl;
+        std::cout << "\n------------------- List Of Tasks -------------------" << std::endl;
+        for (auto &ref : tasks)
+        {
+            std::cout << "Task " << ++TaskCounter << " Data ==>" << std::endl;
+            std::cout << ref.toString() << std::endl;
+            std::cout<<"------------------------------------------------------"<<std::endl;
+        }
+    }
+    else
+    {
+        std::cout << "\nNo Tasks Found !!" << std::endl;
     }
 }
 
@@ -240,7 +250,7 @@ void TaskManager::SaveTasksToFile(const std::string &filename) const
             for (auto &it : tasks)
             {
                 std::string TaskDetails;
-                TaskDetails = "ID: " + std::to_string(it.int32GetTaskID()) + '|' + "Title: " + it.int32GetTaskTitle() + '|' + "Description: " + it.int32GetTaskDescription() + '|' + "Due: " + it.int32GetTaskdueDate() + '|' + "Priority: " + it.int32GetTaskpriority() + '|' + "Status: " + it.GetTaskStatus() + "\n";
+                TaskDetails = "ID: " + std::to_string(it.int32GetTaskID()) + '|' + "Title: " + it.int32GetTaskTitle() + '|' + "Description: " + it.int32GetTaskDescription() + '|' + "Due Date: " + it.int32GetTaskdueDate() + '|' + "Priority: " + it.int32GetTaskpriority() + '|' + "Status: " + it.GetTaskStatus() + "\n";
                 FileHandler << TaskDetails;
             }
             std::cout << "Tasks Contenet Saved Successfully" << std::endl;

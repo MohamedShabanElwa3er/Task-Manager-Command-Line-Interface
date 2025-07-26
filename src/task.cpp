@@ -64,7 +64,7 @@ std::string Task::toString(void) const
     TaskDetails = "ID: " + std::to_string(id) + '\n' +
                   "Title: " + this->title + '\n' +
                   "Description: " + this->description + '\n' +
-                  "Due: " + this->dueDate + '\n' +
+                  "Due Date: " + this->dueDate + '\n' +
                   "Priority: " + this->priority + '\n' +
                   "Status: " + this->TaskStatus;
     return TaskDetails;
